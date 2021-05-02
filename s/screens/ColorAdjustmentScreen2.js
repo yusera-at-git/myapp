@@ -11,9 +11,12 @@ const reducer =(state, action)=>{
 //second argument is the object thatdescribes the changes we want to make//
 //state==={red:0, green:0, blue:0}
 //action==={colortochange: "red||green||blue", amount:+15||-15}
-switch(action.colorToChange){
+
+
+/*switch(action.colorToChange){
+
     case "red":
-        //we are going to override the value of red//
+         //we are going to override the value of red//
         return {...state,red:state.red+action.amount};
         case "green":
             //we are going to override the value of green//
@@ -22,8 +25,43 @@ switch(action.colorToChange){
                 //we are going to override the value of blue//
                 return { ...state,blue:state.blue+action.amount};
                 default: 
-}
-};
+}*/
+
+        //below is the switch statement with validation:
+switch(action.colorToChange){
+    
+//case red:
+    case "red":
+        //we are going to override the value of red//
+
+        /************{{   its important that your switch case returns something in reducer, 
+            so in the below cases we have passed our validation statements i.e. ternary if statements 
+            in the return statement of eacg case  }}***********/
+    return (state.red+action.amount>255||state.red+action.amount<0)
+    ?state
+    :{...state,red:state.red+action.amount};
+
+
+//case green:
+    case "green":
+        //we are going to override the value of green//
+    return (state.green+action.amount>255||state.green+action.amount<0)
+    ?state
+    :{ ...state,green:state.green+action.amount};  
+    
+ //case blue:   
+    case "blue":
+        //we are going to override the value of blue//
+    return (state.blue+action.amount>255||state.blue+action.amount<0)
+    ?state
+    :{ ...state,blue:state.blue+action.amount};
+    
+    //default case:
+    default: 
+    return state;
+}//switch close
+
+};//reducer close
 
 //our functional component starts here:
 const ColorAdjustmentScreen1=()=>{
