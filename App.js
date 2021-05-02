@@ -7,7 +7,7 @@ import ImageScreen from "./s/screens/ImageScreen";
 import CounterScreen from "./s/screens/Counter";
 import ColorScreen from "./s/screens/ColorScreen2";
 import ColorAdjustmentScreen from "./s/screens/ColorAdjustmentScreen";
-
+import ColorAdjustmentScreen1 from "./s/screens/ColorAdjustmentScreen2";
 
 //react-navigation & navigation-stack are v4 of navigation library
 //@react-navigation-stack is v5
@@ -18,7 +18,10 @@ const navigator= createStackNavigator(
         Image:ImageScreen,
         Count: CounterScreen,
         Color:ColorScreen,
-        Coloradscreen:ColorAdjustmentScreen 
+        Coloradscreen:ColorAdjustmentScreen,
+        Coloradscreen1:ColorAdjustmentScreen1
+
+
     },
     {
         initialRouteName:"Home",

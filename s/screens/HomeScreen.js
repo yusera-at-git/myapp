@@ -24,6 +24,11 @@ const HomeScreen =(props)=>{
     title="coloradscreen"
     onPress={()=>{props.navigation.navigate("Coloradscreen")}}
     />
+
+<Button
+    title="coloradscreen1"
+    onPress={()=>{props.navigation.navigate("Coloradscreen1")}}
+    />
     </View>
   );
 }
