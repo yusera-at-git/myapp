@@ -46,18 +46,18 @@ const ColorAdjustmentScreen=()=>{
         <View style={{alignItems:"center",justifyContent:"center"}}>
             <ColorAdjustmentButton 
             onIncrease={()=>{setColor('red',INCDECNUM)}}
-            onDecrease={()=>{setColor( 'red'-INCDECNUM)}} 
+            onDecrease={()=>{setColor( 'red',-INCDECNUM)}} 
             color="Red"
             />
             <ColorAdjustmentButton 
-            onIncrease={()=>{setColor('green'+INCDECNUM)}}
-            onDecrease={()=>{setColor('green'-INCDECNUM)}}
+            onIncrease={()=>{setColor('green',INCDECNUM)}}
+            onDecrease={()=>{setColor('green',-INCDECNUM)}}
             color="Green"
             />
 
             <ColorAdjustmentButton 
-            onIncrease={()=>{setColor('blue'+INCDECNUM)}}
-            onDecrease={()=>{setColor('blue'-INCDECNUM)}}
+            onIncrease={()=>{setColor('blue',INCDECNUM)}}
+            onDecrease={()=>{setColor('blue',-INCDECNUM)}}
             color="Blue"/>
 
             <View style={[{ height:100, width:100, backgroundColor:`rgb(${red},${green},${blue})`}]} />
