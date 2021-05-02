@@ -13,41 +13,26 @@ const setColor=(color,change)=>{
         //color
 switch(color){
               //red+change<0 because in inDecrease we have red "-" INCDECNUM
-            case "red":
-                if(red+change>255||red+change<0){
-            return ;
-            }
-            else{
-                setred(red+change)
-            }
+
+            //case 1  
+             case "red":
+                (red+change>255||red+change<0)?null:setred(red+change)
             return;
 
+            //case 2
+            case "blue":
 
-        case "blue":
-
-            if(blue+change>255||blue+change<0){
-                return;
-            }
-            else
-         {
-                setblue(blue+change)
-        }
+            (blue+change>255||blue+change<0)?null:setblue(blue+change)
         return;
 
         case "green":
-            if(green+change>255||green+change<0){
-                return;
-
-            }
-            else{
-                setgreen(green+change)
-            }
+            (green+change>255||green+change<0)?null:setgreen(green+change)          
         return;
     
-    default:
-        return;
+    default: return;
+}
         
-}}
+}
 
 //return() function starts from here:
 
@@ -61,7 +46,7 @@ switch(color){
             <ColorAdjustmentButton 
             onIncrease={()=>{setColor('green',INCDECNUM)}}
             onDecrease={()=>{setColor('green',-INCDECNUM)}}
-            color="Green"
+            color="Green"  
             />
 
             <ColorAdjustmentButton 
