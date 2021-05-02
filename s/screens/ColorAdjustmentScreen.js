@@ -3,23 +3,27 @@ import { useState } from "react";
 import {Text, View, Button, StyleSheet} from "react-native";
 import ColorAdjustmentButton from "../components/ColorAdjustmentButton";
 
-const INCDECNUM=15;
+const INCDECNUM=50;
 const ColorAdjustmentScreen=()=>{
     const [red, setred]=useState(0);
     const[green,setgreen]=useState(0);
     const[blue,setblue]=useState(0);
 
-    const setColor=(color,change)=>{
+const setColor=(color,change)=>{
         //color
-        if (color==='red'){
-            //red+change<0 because in inDecrease we have red "-" INCDECNUM
-            if(red+change>255||red+change<0){
+switch(color){
+              //red+change<0 because in inDecrease we have red "-" INCDECNUM
+            case "red":
+                if(red+change>255||red+change<0){
             return ;
             }
             else{
                 setred(red+change)
-            }}
-        if(color==="blue"){
+            }
+            return;
+
+
+        case "blue":
 
             if(blue+change>255||blue+change<0){
                 return;
@@ -27,18 +31,23 @@ const ColorAdjustmentScreen=()=>{
             else
          {
                 setblue(blue+change)
-        }}
+        }
+        return;
 
-        if(color==="green"){
+        case "green":
             if(green+change>255||green+change<0){
                 return;
 
             }
             else{
                 setgreen(green+change)
-            }}
-        
             }
+        return;
+    
+    default:
+        return;
+        
+}}
 
 //return() function starts from here:
 
