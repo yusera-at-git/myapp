@@ -6,6 +6,7 @@ import ImageComponents from "./s/components/ImageComponents";
 import ImageScreen from "./s/screens/ImageScreen";
 import CounterScreen from "./s/screens/Counter";
 import ColorScreen from "./s/screens/ColorScreen2";
+import ColorAdjustmentScreen from "./s/screens/ColorAdjustmentScreen";
 
 
 //react-navigation & navigation-stack are v4 of navigation library
@@ -16,7 +17,8 @@ const navigator= createStackNavigator(
         Flat: ListFunction,
         Image:ImageScreen,
         Count: CounterScreen,
-        Color:ColorScreen
+        Color:ColorScreen,
+        Coloradscreen:ColorAdjustmentScreen 
     },
     {
         initialRouteName:"Home",
