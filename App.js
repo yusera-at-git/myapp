@@ -9,6 +9,7 @@ import ColorScreen from "./s/screens/ColorScreen2";
 import ColorAdjustmentScreen from "./s/screens/ColorAdjustmentScreen";
 import ColorAdjustmentScreen1 from "./s/screens/ColorAdjustmentScreen2";
 import CounterUseReduce from "./s/screens/CounterUseReduce";
+import UserInput from "./s/screens/UserInput";
 
 //react-navigation & navigation-stack are v4 of navigation library
 //@react-navigation-stack is v5
@@ -21,13 +22,14 @@ const navigator= createStackNavigator(
         Color:ColorScreen,
         Coloradscreen:ColorAdjustmentScreen,
         Coloradscreen1:ColorAdjustmentScreen1,
-        Counterred:CounterUseReduce
+        Counterred:CounterUseReduce,
+        Input: UserInput
 
 
 
     },
     {
-        initialRouteName:"Counterred",
+        initialRouteName:"Input",
         defaultNavigationOptions:{
             title:"App"
         }

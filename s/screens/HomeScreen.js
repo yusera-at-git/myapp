@@ -35,6 +35,11 @@ const HomeScreen =(props)=>{
     onPress={()=>{props.navigation.navigate("Counterred")}}
     />
 
+
+<Button
+    title="user input"
+    onPress={()=>{props.navigation.navigate("Input")}}
+    />
     </View>
   );
 }
