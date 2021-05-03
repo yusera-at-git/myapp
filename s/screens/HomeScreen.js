@@ -28,7 +28,13 @@ const HomeScreen =(props)=>{
 <Button
     title="coloradscreen1"
     onPress={()=>{props.navigation.navigate("Coloradscreen1")}}
+/>
+
+<Button
+    title="Counterusereducer"
+    onPress={()=>{props.navigation.navigate("Counterred")}}
     />
+
     </View>
   );
 }

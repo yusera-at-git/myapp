@@ -24,7 +24,7 @@ const reducer =(state, action)=>{
             case "blue":
                 //we are going to override the value of blue//
                 return { ...state,blue:state.blue+action.amount};
-                default: 
+                default: state;
 }*/
 
         //below is the switch statement with validation:
