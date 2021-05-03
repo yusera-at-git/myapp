@@ -43,7 +43,7 @@ const [state,dispatch]=useReducer(reducer,{count:0});
  onPress={()=>dispatch({type:"decrement", payload:1})}
 // {()=>{counter==0?null:setcounter(counter-1)}}
 />
-            {/* **********STEP 5: CALL THE DESIRED VALUE OF STATE********** */}
+            {/* **********STEP 5: CALL THE DESIRED VALUE/PROPERTY OF STATE********** */}
 <View> {state.count}</View>
 </View>
 
